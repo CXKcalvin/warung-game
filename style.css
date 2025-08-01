@@ -1,0 +1,504 @@
+*{
+    caret-color: transparent;
+    user-select: none;
+}
+
+body{
+    margin: 0;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    
+  }
+  
+/* halaman pertama */
+
+html{
+    scroll-behavior: smooth;
+}
+
+.halaman{
+    background: linear-gradient(to bottom, blue 0%, purple 33%, red 66%, black);
+    height: 100vh;
+    padding: 40px;
+}
+
+
+/* bagian navbar utama */
+
+.isi{
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icon{
+    display: none;
+    font-size: 25px;
+    color: white;
+    cursor: pointer;
+}
+
+.navbarkiri{
+    float: left;
+    text-transform: uppercase;
+    margin: 25px -20px;
+}
+
+.navbarkanan{
+    display: flex;
+    list-style: none;
+    justify-content: end;
+    gap: 4rem;
+    align-items: center;
+    margin: 25px;
+}
+
+nav ul {
+    list-style: none;
+    margin:0;
+}
+
+nav ul li span{
+    text-decoration: none;
+    color: lightgray;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 20px;
+    cursor: pointer;
+    transition: color 0.3;
+}
+
+nav ul li span:hover {
+    color: white;
+}
+
+nav.transparan{
+    background: transparent;
+    color: blue;
+    position: fixed;  
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+nav.bawah{
+    background: rgba(16, 19, 58, 0.651);
+    color: white;
+    box-shadow: 0 2px 5px rgba(247, 242, 242, 0.3);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+nav ul li span:hover{
+    width: 100%;
+    filter: drop-shadow(0 0 23px #00c3ff);
+}
+
+nav ul li span:active{
+    
+}
+
+/* bagian pop up log out */
+
+#logout{
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* bagian judul dan tentang tujuan web */
+
+.kontenmenu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.kiri{
+    text-align: center;
+}
+.kiri img{
+    width: 487px;
+}
+
+.kiri h1{
+    font-weight: bold;
+    color: white;
+}
+
+.kanan p{
+    font-style: italic;
+    line-height: 1.6;
+    color: #ddddff;
+    font-size: 40px;
+}
+
+/* halaman menu game*/
+
+.halamangame{
+    background: linear-gradient(to bottom, black 90%, blue);
+    height: 100vh;
+    padding: 60px 20px;
+}
+
+.navbargame{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.pencarian{
+    padding-top: 25px;
+}
+
+.slider-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+  }
+
+  .slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .slide {
+    position: relative;
+    min-width: 100%;
+    height: 500px; 
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .slide-text {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 15px 25px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+  }
+
+  .slide.active .slide-text {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .slide-text .title {
+    font-size: 22px;
+    font-weight: bold;
+  }
+
+  .slide-text .price {
+    margin-top: 6px;
+    font-size: 16px;
+    color: #00ffcc;
+  }
+
+  .btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.6);
+    color: white;
+    border: none;
+    font-size: 24px;
+    padding: 10px 15px;
+    cursor: pointer;
+    z-index: 1;
+    border-radius: 50%;
+  }
+
+  .btn:hover {
+    background: rgba(255,255,255,0.2);
+  }
+
+  #prev {
+    left: 10px;
+  }
+
+  #next {
+    right: 10px;
+  }
+
+/*halaman kontak*/
+
+.halamankontak{
+    padding: 10px;
+}
+
+.isikontak{
+   
+}
+
+.isikontak {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1rem;
+}
+
+.tataprofil p{
+    width: 200px;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px
+}
+
+.tataprofil img{
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    object-fit: cover;
+    border: 2px solid #000;
+}
+
+.tampilan{
+  display: none;
+  text-align: center;
+  margin: 50px;
+}
+
+.tampilan button{
+  background-color: #3b71e2;
+  color: rgb(189, 189, 189);
+  box-shadow: 0 10px 0 cyan, 
+              0 25px 20px black,
+              20px 25px 20px black,
+              -20px 25px 20px black,
+              20px 7px 20px black,
+              -20px 7px 20px black;
+  width: 200px;
+  height: 40px;
+}
+
+.tampilan button:active  {
+  box-shadow: none;
+  transform: translate(0em, 0.70em);
+}
+
+/*button untuk menuju whatsapp*/
+
+.wa{
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.text{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+button {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    font-family: inherit;
+    font-size: 15px;
+}
+
+button.tombolwa {
+    align-content: center;
+    font-weight: 600;
+    color: #382b22;
+    text-transform: uppercase;
+    padding: 1.25em 2em;
+    background: #fff0f0;
+    border: 2px solid #006b29;
+    border-radius: 0.75em;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transition: background 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-transform 150ms cubic-bezier(0, 0, 0.58, 1);
+    transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), background 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-transform 150ms cubic-bezier(0, 0, 0.58, 1);
+}
+
+button.tombolwa::before {
+ position: absolute;
+ content: '';
+ width: 100%;
+ height: 100%;
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ background: #098f1b;
+ border-radius: inherit;
+ -webkit-box-shadow: 0 0 0 2px #006b29, 0 0.625em 0 0 #4dee7e;
+ box-shadow: 0 0 0 2px #006b29, 0 0.625em 0 0 #4dee7e;
+ -webkit-transform: translate3d(0, 0.75em, -1em);
+ transform: translate3d(0, 0.75em, -1em);
+ transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), box-shadow 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-transform 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-box-shadow 150ms cubic-bezier(0, 0, 0.58, 1);
+}
+
+button.tombolwa:hover {
+ background: #5cb15c;
+ -webkit-transform: translate(0, 0.25em);
+ transform: translate(0, 0.25em);
+}
+
+button.tombolwa:hover::before {
+ -webkit-box-shadow: 0 0 0 2px #006b29, 0 0.5em 0 0 #4dee7e;
+ box-shadow: 0 0 0 2px #006b29, 0 0.5em 0 0 #4dee7e;
+ -webkit-transform: translate3d(0, 0.5em, -1em);
+ transform: translate3d(0, 0.5em, -1em);
+}
+
+button.tombolwa:active {
+ background: #5cb15c;
+ -webkit-transform: translate(0em, 0.75em);
+ transform: translate(0em, 0.75em);
+}
+
+button.tombolwa:active::before {
+ -webkit-box-shadow: 0 0 0 2px #006b29, 0 0 #4dee7e;
+ box-shadow: 0 0 0 2px #006b29, 0 0 #4dee7e;
+ -webkit-transform: translate3d(0, 0, -1em);
+ transform: translate3d(0, 0, -1em);
+}
+
+/* mode hp */
+
+@media (max-width: 800px) {
+
+/* bagian navbar utama di mode hp */
+
+  .navbarkanan {
+    display: none;
+    flex-direction: column;
+    background-color: #333;
+    position: absolute;
+    top: 65px;
+    right: 20px;
+    width: 90px;
+    border-radius: 10px;
+    padding: 20px;  
+    
+  }
+
+  .navbarkanan.show{
+    display: flex;
+  }
+
+  .icon{
+    display: block;
+  }
+
+  .kontenmenu {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  .kiri img {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .kanan p {
+    font-size: 20px;
+    padding: 0 10px;
+  }
+
+  .isikontak {
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .isikontak.tampilkan{
+    display: block;
+  }
+
+  .tampilan{
+    display: block;
+  }
+
+  .tataprofil p {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .tataprofil img {
+    width: 150px;
+    height: 150px;
+    margin-left: 35%;
+  }
+
+  /* bagian halaman menu game */
+
+  .navbargame{
+    margin: 0;
+    size: 20px;
+    display: inline;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .pencarian{
+    display: flex;
+    justify-content: center;
+  }
+
+  .pencarian button {
+    margin-left: 10px;
+  }
+
+  .slider-container {
+    height: auto;
+  }
+
+  .slide {
+    height: 250px;
+  }
+
+  .slide-text .title {
+    font-size: 18px;
+  }
+
+  .slide-text .price {
+    font-size: 14px;
+  }
+
+  .btn {
+    font-size: 18px;
+    padding: 8px 10px;
+  }
+
+  .wa {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .text {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  
+}

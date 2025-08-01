@@ -1,0 +1,119 @@
+<!-- file: index.html (di root) -->
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>warung game</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="Warung Game/image/console.png" type="image/x-icon">      
+</head>
+<body>
+    <!--halaman pertaman-->
+    <section class="halaman">
+            <nav class="transparan" id="navbar">
+                <div class="isi">
+                <ul class="navbarkiri" >
+                    <li><span id="nama" onclick="login()" >LOGIN</span></li>
+                </ul>
+                <ul class="navbarkanan" id="ubahbentuk">
+                    <li><span onclick="scrolltosection('halaman')">HALAMAN</span></li>
+                    <li><span onclick="scrolltosection('halamangame')">GAME</span></li>
+                    <li><span onclick="scrolltosection('halamankontak')">KONTAK</span></li>
+                </ul>
+                <div class="icon" id="icon">
+                    &#9776;
+                </div>
+                </div>
+            </nav>
+
+<!-- bagian pop up log out-->
+ <div id="logout">
+     <div class="popup">
+        <p>Apakah Anda Ingin Log Out ?</p>
+        <button class="cancel" onclick="batal()">Batal</button>
+        <button class="next" onclick="lanjut()">lanjutkan</button>
+     </div>
+ </div>
+
+    <div class="kontenmenu">
+        <div class="kiri">
+            <img src="image/console.png">
+            <h1>WARUNG GAME</h1>
+        </div>
+        <div class="kanan">
+            <p>
+                Selamat datang di warung game, tempat terbaik buat 
+                yang cari game original dengan harga bersahabat! Mulai dari game PC, 
+                konsol, sampai mobile, semuanya tersedia lengkap dan up to date. Belanja aman, 
+                cepat, dan pastinya terpercaya!
+            </p>
+        </div>
+    </div>
+</section>
+
+<!--halaman kedua-->
+<section class="halamangame">
+    <div class="navbargame">
+        <h1>GAME TERPOPULER</h1>
+        <div class="pencarian">
+            🔎 <input type="text"  id="steamSearchInput"> <button onclick="searchSteam()">CARI</button>
+        </div>
+    </div>
+    <div style="display: block; flex-direction: column; align-items: center;">
+    <div class="slider-container" >
+        <button class="btn" id="prev">&#10094;</button>
+        <div class="slider" id="slider" onclick="bayar()"></div>
+        <button class="btn" id="next">&#10095;</button>
+      </div>
+    </div>
+</section>
+
+<!--halaman ketiga-->
+<section class="halamankontak" style="background: blue;">
+    <h1>hubungi kami</h1>
+    <h3>jika ada suatu kendala seperti gagal login, gagal dalam proses membayar, gagal download, dan dll</h3>
+    <div class="isikontak" id="isikontak">
+        <div class="tataprofil">
+            <img src="image/calvin.jpg" alt="calvin">
+            <p>Nama: calvin<br> </p> <p> tugasnya mengerjakan css </p> 
+        </div>
+        <div class="tataprofil">
+            <img src="image/ahmad ridho.jpg" alt="ridho">
+            <p>Nama: ridho<br> </p> <p> tugasnya mengerjakan javascript </p>
+        </div>
+        <div class="tataprofil">
+            <img src="image/ferdiansyah.jpg" alt="ferdiansyah">
+            <p>Nama: ferdiansyah <br> </p> <p> tugasnya: mengerjakan html </p>
+        </div>
+        <div class="tataprofil">
+            <img src="image/nicho.jpg" alt="nicho">    
+            <p>Nama: nicho<br> </p> <p> tugasnya: mengerjakan css </p>
+        </div>
+        <div class="tataprofil">
+            <img src="image/afdal.jpg" alt="afdal">
+            <p>Nama: afdal<br> </p> <p> tugasnya: mengerjakan js </p>
+        </div>
+        <div class="tataprofil">
+            <img src="image/hutama.jpg" alt="hutama">
+            <p>Nama: hutama<br> </p> <p> tugasnya: mengerjakan html </p>
+        </div>
+    </div>
+
+    <div class="tampilan">
+        <button id="tampilan">Tampilkan Anggota &#8744;</button>
+    </div>
+    
+
+        <a href="https://wa.me/6208993663337" class="wa">
+            <button class="tombolwa">
+                <div class="text">
+                   <img src="https://www.pngplay.com/wp-content/uploads/8/Whatsapp-Logo-Download-Free-PNG.png" alt="icon whatsapp" style="width: 50px;">
+                   whatsapp
+                </div>
+            </button>
+        </a>
+    </div>
+</section>
+<script src="js/script.js"></script>
+</html>
