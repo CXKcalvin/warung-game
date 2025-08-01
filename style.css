@@ -18,7 +18,7 @@ html{
 
 .halaman{
     background: linear-gradient(to bottom, blue 0%, purple 33%, red 66%, black);
-    height: 100vh;
+    height: 100dvh;
     padding: 40px;
 }
 
@@ -247,14 +247,10 @@ nav ul li span:active{
     padding: 10px;
 }
 
-.isikontak{
-   
-}
-
 .isikontak {
     display: flex;
-    justify-content: space-evenly;
-    gap: 1rem;
+    justify-content: space-between;
+    text-align: center;
 }
 
 .tataprofil p{
@@ -279,9 +275,10 @@ nav ul li span:active{
 }
 
 .tampilan button{
-  background-color: #3b71e2;
-  color: rgb(189, 189, 189);
-  box-shadow: 0 10px 0 cyan, 
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background-color: cyan;
+  color: black;
+  box-shadow: 0 10px 0 #3b71e2, 
               0 25px 20px black,
               20px 25px 20px black,
               -20px 25px 20px black,
@@ -289,6 +286,7 @@ nav ul li span:active{
               -20px 7px 20px black;
   width: 200px;
   height: 40px;
+  border-radius: 10px;
 }
 
 .tampilan button:active  {
@@ -383,7 +381,7 @@ button.tombolwa:active::before {
 
 /* mode hp */
 
-@media (max-width: 800px) {
+@media (max-width: 1350px) {
 
 /* bagian navbar utama di mode hp */
 
@@ -393,11 +391,10 @@ button.tombolwa:active::before {
     background-color: #333;
     position: absolute;
     top: 65px;
-    right: 20px;
+    right: 10px;
     width: 90px;
     border-radius: 10px;
     padding: 20px;  
-    
   }
 
   .navbarkanan.show{
@@ -427,12 +424,11 @@ button.tombolwa:active::before {
 
   .isikontak {
     display: none;
-    align-items: center;
-    justify-content: space-between;
   }
 
   .isikontak.tampilkan{
     display: block;
+    text-align: center;
   }
 
   .tampilan{
@@ -447,7 +443,6 @@ button.tombolwa:active::before {
   .tataprofil img {
     width: 150px;
     height: 150px;
-    margin-left: 35%;
   }
 
   /* bagian halaman menu game */
