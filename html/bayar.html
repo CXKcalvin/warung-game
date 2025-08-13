@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Pilih Metode Pembayaran</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #1a1a1a;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background: #2c2c2c;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 25px rgba(0, 255, 255, 0.2);
+      width: 320px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #00ffff;
+    }
+
+    .metode {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    label {
+      background: #333;
+      padding: 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      border: 2px solid transparent;
+      transition: all 0.2s ease;
+    }
+
+    input[type="radio"] {
+      display: none;
+    }
+
+    input[type="radio"]:checked + label {
+      border-color: #00ffff;
+      background: #444;
+    }
+
+    button {
+      width: 100%;
+      margin-top: 20px;
+      padding: 12px;
+      background-color: #00ffff;
+      color: #000;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #00cccc;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Metode Pembayaran</h2>
+    <div class="metode">
+      <input type="radio" id="kartu" name="metode" value="Kartu Kredit">
+      <label for="kartu">💳 Kartu Kredit</label>
+
+      <input type="radio" id="dana" name="metode" value="Dana">
+      <label for="dana">📱 Dana</label>
+
+      <input type="radio" id="ovo" name="metode" value="OVO">
+      <label for="ovo">📱 OVO</label>
+
+      <input type="radio" id="gopay" name="metode" value="GoPay">
+      <label for="gopay">📱 GoPay</label>
+
+      <input type="radio" id="shopeepay" name="metode" value="ShopeePay">
+      <label for="shopeepay">🛒 ShopeePay</label>
+    </div>
+
+    <button onclick="bayar()">Bayar</button>
+  </div>
+
+  <script>
+    function bayar() {
+      const metodeDipilih = document.querySelector('input[name="metode"]:checked');
+      if (metodeDipilih) {
+        alert("Pembayaran melalui " + metodeDipilih.value + " telah berhasil!");
+        window.location.href = '../index.html';
+      } else {
+        alert("Silakan pilih metode pembayaran terlebih dahulu.");
+      }
+    }
+  </script>
+
+</body>
+</html>
